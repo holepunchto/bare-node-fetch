@@ -1,0 +1,29 @@
+{
+  "name": "bare-node-fetch",
+  "version": "0.0.0",
+  "description": "Cross runtime fetch module",
+  "files": [
+    "bare.js",
+    "global.js"
+  ],
+  "dependencies": {
+    "bare-fetch": "^2.2.1"
+  },
+  "exports": {
+    "./package": "./package.json",
+    ".": {
+      "bare": "./bare.js",
+      "default": "./global.js"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/holepunchto/bare-node-fetch.git"
+  },
+  "author": "Holepunch Inc",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/holepunchto/bare-node-fetch/issues"
+  },
+  "homepage": "https://github.com/holepunchto/bare-node-fetch"
+}
