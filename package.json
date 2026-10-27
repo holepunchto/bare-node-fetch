@@ -2,19 +2,23 @@
   "name": "bare-node-fetch",
   "version": "1.0.0",
   "description": "Cross runtime fetch module",
-  "files": [
-    "bare.js",
-    "global.js"
-  ],
-  "dependencies": {
-    "bare-fetch": "^2.2.1"
-  },
   "exports": {
     "./package": "./package.json",
     ".": {
       "bare": "./bare.js",
       "default": "./global.js"
     }
+  },
+  "files": [
+    "bare.js",
+    "global.js"
+  ],
+  "scripts": {
+    "format": "prettier --write . && lunte --fix",
+    "lint": "prettier --check . && lunte",
+    "test": "npm run test:bare && npm run test:node",
+    "test:bare": "brittle-bare --coverage test.js",
+    "test:node": "brittle-node --coverage test.js"
   },
   "repository": {
     "type": "git",
@@ -25,5 +29,14 @@
   "bugs": {
     "url": "https://github.com/holepunchto/bare-node-fetch/issues"
   },
-  "homepage": "https://github.com/holepunchto/bare-node-fetch"
+  "homepage": "https://github.com/holepunchto/bare-node-fetch",
+  "dependencies": {
+    "bare-fetch": "^2.2.1"
+  },
+  "devDependencies": {
+    "brittle": "^4.5.0",
+    "lunte": "^1.8.6",
+    "prettier": "^3.6.2",
+    "prettier-config-holepunch": "^2.0.0"
+  }
 }
