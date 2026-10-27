@@ -8,7 +8,7 @@ npm install bare-node-fetch
 
 ## Usage
 
-``` js
+```js
 const fetch = require('bare-node-fetch')
 
 // in node its returning global.fetch
